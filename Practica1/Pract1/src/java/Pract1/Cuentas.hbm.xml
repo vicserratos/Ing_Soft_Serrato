@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8/03/2016 03:03:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pract1.Cuentas" table="cuentas" schema="public" optimistic-lock="version">
+        <id name="identificador" type="serializable">
+            <column name="Identificador" />
+            <generator class="assigned" />
+        </id>
+        <property name="contasenia" type="serializable">
+            <column name="Contasenia" not-null="true" />
+        </property>
+        <set name="usuarioses" table="usuarios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Identificador_Cuentas" not-null="true" />
+            </key>
+            <one-to-many class="Pract1.Usuarios" />
+        </set>
+    </class>
+</hibernate-mapping>

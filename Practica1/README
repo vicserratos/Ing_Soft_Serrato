@@ -1,0 +1,11 @@
+El script lo cree de la siguiente manera:
+
+-Cree mi proyecto Java Web
+-Agregue framework JSF y Hibernate
+-Conecte con mi base en PostgreSql
+-Luego hice ingenieria inversa
+-Despues de haberse completado, mapee mi base de datos con Hibernate
+
+
+1.- 30 minutos
+2.- hibernate.cfg y hibernate.revenge
